@@ -74,3 +74,68 @@ html {
 }
 
 /* End of Hero section */
+
+/* About section */
+.about {
+    width: 100%;
+    min-width: 50vh;
+    padding: 10rem 5rem;
+    flex-direction: column;
+}
+
+.about .about-info {
+    text-align: center;
+}
+
+.about .about-info-heading {
+    font-size: 4rem;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    color: black;
+}
+
+.about .about-info .about-info-p {
+    font-size: 1.5rem;
+    line-height: 3rem;
+    margin-top: 20px;
+}
+
+.about .about-info .about-info-button {
+    padding: 1.6rem 2.6rem;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, .548);
+    text-decoration: none;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.about .about-img .about-img-wrapper {
+    margin-top: 50px;
+    height: auto;
+    max-width: 400px;
+    position: relative;
+    display: inline-block;
+}
+
+.about .about-img .about-img-wrapper img {
+    height: 100%;
+    width: 100%;
+}
+
+.about .about-img .about-img-wrapper::after {
+    position: absolute;
+    content: '';
+    right: -5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 70%;
+    height: 120%;
+    background-color: rgba(33, 33, 33, 0.158);
+    z-index: -1;
+}
+
+/* End of about section */
