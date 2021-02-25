@@ -257,4 +257,37 @@ html {
 
 /* End of Service section */
 
+/* Hire section */
+.hire {
+    min-height: 10vh;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.281);
+    padding: 3rem 2rem;
+}
+
+.hire .hire-heading {
+    color: black;
+    font-size: 2.2rem;
+    text-align: center;
+}
+
+.hire .hire-button {
+    padding: 2rem 3rem;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.377);
+    font-size: 2.6rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    margin-top: 20px;
+    color: whitesmoke;
+    transition: .1s ease background-color;
+}
+
+.hire .hire-button:hover {
+    background-color: black;
+}
+/* End of hire section */
+
 /* 31:33s */
