@@ -199,6 +199,60 @@ html {
     height: 100%;
     width: 100%;
     backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.199);
+    padding: 10px;
+}
+
+.services .services-info .service .service-card .service-back {
+    transform: rotateY(180deg);
+}
+
+.services .services-info .service .service-card .service-front i {
+    color: black;
+    font-size: 5rem;
+    margin-bottom: 10px;
+}
+
+.services .services-info .service .service-card .service-front .service-front-heading,
+.services .services-info .service .service-card .service-back .service-back-heading {
+    font-size: 2.5rem;
+    text-transform: capitalize;
+}
+
+.services .services-info .service:hover .service-card {
+    transform: rotateY(180deg);
+}
+
+.services .services-info .service .service-card .service-back .service-back-info {
+    font-size: 1.3rem;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.services .services-info .service:nth-child(2) .service-card .service-front {
+    background-image: url(./images/img-2.jpg);
+    background-size: cover;
+    position: relative;
+    color: white;
+}
+
+.services .services-info .service:nth-child(2) .service-card .service-front::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.274);
+    z-index: -1;
+}
+
+.services .services-info .service:nth-child(2) .service-card .service-front i {
+    color: white;
 }
 
 /* End of Service section */
