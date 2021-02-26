@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Reggae+One&display=swap');
+
+:root {
+    --grey: rgb(85, 85, 85);
+}
 
 * {
     padding: 0;
@@ -8,7 +13,8 @@
 
 html {
     font-size: 10px;
-    font-family: 'MOntserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
 }
 
 .container {
@@ -18,6 +24,130 @@ html {
     align-items: center;
     justify-content: center;
 }
+
+/* to change the color of awewsome icons */
+.fab {
+    color: white;
+    margin: auto 3px;
+}
+
+/* Nav bar */
+#navbar {
+    height: auto;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+
+.navbar {
+    background-color: black;
+    left: 0;
+    top: 0;
+    padding: 1rem 5rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .brand a {
+    font-family: 'Reggae One', cursive;
+    color: white;
+    font-size: 3rem;
+    text-decoration: none;
+}
+
+.navbar .nav-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar .nav-list .hamburger {
+    height: auto;
+    border: 2px solid white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 60px;
+    transition: .3s ease all;
+}
+
+.navbar .nav-list .hamburger .bar {
+    height: 2px;
+    width: 30px;
+    background-color: white;
+    position: relative;
+    display: flex;
+}
+
+.navbar .nav-list .hamburger .bar::after,
+.navbar .nav-list .hamburger .bar::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    transition: .3s ease all;
+}
+
+.navbar .nav-list .hamburger .bar::before {
+    top: 8px;
+}
+
+.navbar .nav-list .hamburger .bar::after {
+    bottom: 8px;
+}
+
+.navbar .nav-list ul {
+    position: absolute;
+    width: 100%;
+    top: 80px;
+    left: 0;
+    background-color: var(--grey);
+    padding: 5rem 0;
+    /* translatey moves 100% of y ie, height */
+    transform: translateY(-100%);
+    transition: .3 ease transform;
+    text-align: center;
+}
+
+.navbar .nav-list ul li {
+    list-style: none;
+    display: block;
+    position: relative;
+}
+
+.navbar .nav-list ul li:hover:after {
+    transform: translateX(-50%) scale(1);
+}
+
+.navbar .nav-list ul li:after {
+    content: '';
+    position: absolute;
+    width: 5rem;
+    height: .2rem;
+    background-color: white;
+    left: 50%;
+    transform: translateX(-50%) scale(0);
+    bottom: 0;
+    transition: .3s ease transform;
+}
+
+.navbar .nav-list ul li a {
+    font-size: 1.8rem;
+    padding: 2rem 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    display: block;
+    letter-spacing: .15rem;
+}
+
+/* Nav bar */
 
 /* Hero section */
 
@@ -59,12 +189,13 @@ html {
     color: white;
     text-transform: uppercase;
     letter-spacing: .6rem;
-    background-color: rgba(85, 85, 85, 0.534);
+    background-color: var(--grey)
 }
 
 .hero .hero-img {
     height: auto;
-    width: 80%;
+    width: 70%;
+    margin-top: 70px;
     margin-bottom: 3rem;
 }
 
@@ -103,7 +234,7 @@ html {
 .about .about-info .about-info-button {
     padding: 1.6rem 2.6rem;
     display: inline-block;
-    background-color: rgba(0, 0, 0, .548);
+    background-color: var(--grey);
     text-decoration: none;
     font-size: 1.6rem;
     text-transform: uppercase;
@@ -134,7 +265,7 @@ html {
     transform: translateY(-50%);
     width: 70%;
     height: 120%;
-    background-color: rgba(33, 33, 33, 0.158);
+    background-color: var(--grey);
     z-index: -1;
 }
 
@@ -262,21 +393,22 @@ html {
     min-height: 10vh;
     flex-direction: column;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.281);
+    background-color: var(--grey);
     padding: 3rem 2rem;
 }
 
 .hire .hire-heading {
-    color: black;
+    color: white;
     font-size: 2.2rem;
     text-align: center;
+    text-transform: capitalize;
 }
 
 .hire .hire-button {
     padding: 2rem 3rem;
     display: inline-block;
-    background-color: rgba(0, 0, 0, 0.377);
-    font-size: 2.6rem;
+    background-color: black;
+    font-size: 2rem;
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: .2rem;
@@ -286,9 +418,103 @@ html {
 }
 
 .hire .hire-button:hover {
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.500);
 }
 
 /* End of hire section */
 
+/* Footer section */
+.footer {
+    min-height: 20vh;
+    width: 100%;
+    background-color: black;
+    color: white;
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+}
+
+.footer .footer-contact {
+    padding: 10px;
+}
+
+.footer .footer-contact .footer-contact-heading {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.footer .footer-contact .footer-contact-info {
+    font-size: 1.4rem;
+    padding-top: 10px;
+    letter-spacing: 0.2rem;
+}
+
+.footer .social-medias .social-media-icons {
+    font-size: 3rem;
+    margin: 0.4rem;
+    display: inline-block;
+}
+
+/* End of footersection */
+
+/* Media query for desktop and tab */
+@media only screen and (min-width:768px) {
+
+    .hero {
+        height: 100vh;
+        flex-direction: row;
+        padding-left: 10%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero-info {
+        max-width: 30%;
+        text-align: left;
+    }
+
+    .hero .hero-info .hero-info-sub-heading {
+        font-size: 1.3rem;
+        letter-spacing: .5rem;
+    }
+
+    .hero .hero-img {
+        min-width: 400px;
+        max-width: 1000px;
+    }
+
+    .hero .hero-info .hero-button {
+        margin: 30px auto;
+    }
+
+    .about {
+        width: 80%;
+        margin: 0 auto;
+        flex-direction: row;
+    }
+
+    .about .about-info {
+        width: 50%;
+        text-align: left;
+        padding-right: 17rem;
+    }
+
+    .services .services-header .services-header-p {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .services .services-info {
+        flex-direction: row;
+        width: 80%;
+    }
+
+    .services .services-info .service {
+        margin: 0;
+    }
+}
+
+/* End of Media query */
 /* 1.8.0s */
