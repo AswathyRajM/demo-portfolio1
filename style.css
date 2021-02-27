@@ -52,9 +52,11 @@ html {
 }
 
 .navbar .brand a {
-    font-family: 'Flash Back - Demo', sans-serif;
+    font-family: 'Reggae One',
+        cursive;
     font-size: 3rem;
     color: white;
+    text-decoration: none;
 }
 
 .navbar .nav-list {
