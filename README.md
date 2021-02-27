@@ -1,11 +1,11 @@
-#Portflio website
+# Portflio website
 
-##Technologies used
+## Technologies used
 
-####HTML
-####CSS
-####JavaScript
+#### HTML
+#### CSS
+#### JavaScript
 
-###How to Run
+### How to Run
 
 Download the repository and open index.html with any web browser of your choice
