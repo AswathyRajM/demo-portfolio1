@@ -37,6 +37,7 @@ html {
     width: 100%;
     position: fixed;
     z-index: 100;
+    background-color: black;
 }
 
 .navbar {
@@ -51,10 +52,9 @@ html {
 }
 
 .navbar .brand a {
-    font-family: 'Reggae One', cursive;
-    color: white;
+    font-family: 'Flash Back - Demo', sans-serif;
     font-size: 3rem;
-    text-decoration: none;
+    color: white;
 }
 
 .navbar .nav-list {
@@ -64,15 +64,33 @@ html {
 }
 
 .navbar .nav-list .hamburger {
-    height: auto;
     border: 2px solid white;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 60px;
-    width: 60px;
-    transition: .3s ease all;
+    height: 70px;
+    width: 70px;
+    transition: .3s ease transform;
+    cursor: pointer;
+}
+
+.navbar .nav-list .hamburger.active {
+    transform: rotate(360deg);
+}
+
+.navbar .nav-list .hamburger.active .bar:before {
+    top: 0;
+    transform: rotate(45deg);
+}
+
+.navbar .nav-list .hamburger.active .bar:after {
+    top: 0;
+    transform: rotate(-45deg);
+}
+
+.navbar .nav-list .hamburger.active .bar {
+    background-color: transparent;
 }
 
 .navbar .nav-list .hamburger .bar {
@@ -83,8 +101,8 @@ html {
     display: flex;
 }
 
-.navbar .nav-list .hamburger .bar::after,
-.navbar .nav-list .hamburger .bar::before {
+.navbar .nav-list .hamburger .bar::before,
+.navbar .nav-list .hamburger .bar::after {
     content: '';
     position: absolute;
     left: 0;
@@ -105,14 +123,14 @@ html {
 .navbar .nav-list ul {
     position: absolute;
     width: 100%;
-    top: 80px;
+    top: 0;
     left: 0;
-    background-color: var(--grey);
+    background-color: rgb(46, 45, 45);
     padding: 5rem 0;
-    /* translatey moves 100% of y ie, height */
     transform: translateY(-100%);
-    transition: .3 ease transform;
+    transition: .3s ease transform;
     text-align: center;
+    z-index: -1;
 }
 
 .navbar .nav-list ul li {
@@ -139,14 +157,19 @@ html {
 
 .navbar .nav-list ul li a {
     font-size: 1.8rem;
-    padding: 2rem 0;
     text-decoration: none;
     text-transform: uppercase;
     color: white;
     display: block;
     letter-spacing: .15rem;
+    padding: 2rem 3rem;
 }
 
+.navbar .nav-list.open ul {
+    transform: translateY(90px);
+}
+
+/* End of hamburger menu */
 /* Nav bar */
 
 /* Hero section */
@@ -253,7 +276,7 @@ html {
 }
 
 .about .about-img .about-img-wrapper img {
-    height: auto;
+    height: 100%;
     width: 100%;
 }
 
