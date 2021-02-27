@@ -310,7 +310,8 @@ html {
 .services {
     flex-direction: column;
     min-height: 60vh;
-    padding: 10rem 5rem;
+    padding: 2rem 5rem;
+    padding-bottom: 5rem;
 }
 
 .services .services-header {
