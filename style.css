@@ -253,19 +253,19 @@ html {
 }
 
 .about .about-img .about-img-wrapper img {
-    height: 100%;
+    height: auto;
     width: 100%;
 }
 
 .about .about-img .about-img-wrapper::after {
     position: absolute;
     content: '';
-    right: -5rem;
+    right: -4rem;
     top: 50%;
     transform: translateY(-50%);
     width: 70%;
     height: 120%;
-    background-color: var(--grey);
+    background-color: rgba(144, 140, 140, 0.37);
     z-index: -1;
 }
 
