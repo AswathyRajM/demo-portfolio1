@@ -167,7 +167,7 @@ html {
 }
 
 .navbar .nav-list.open ul {
-    transform: translateY(90px);
+    transform: translateY(80px);
 }
 
 /* End of hamburger menu */
