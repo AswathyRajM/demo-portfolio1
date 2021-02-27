@@ -12,5 +12,5 @@
 
 Download the repository and open index.html with any web browser of your choice
 
-You can preview the website by clicking the link below
+You can view the website by clicking the link below
 https://aswathyrajm.github.io/portfolio-html-css/

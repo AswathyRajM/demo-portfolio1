@@ -538,6 +538,7 @@ html {
     .hero .hero-img {
         min-width: 400px;
         max-width: 1000px;
+        max-width: 130vh;
     }
 
     .hero .hero-info .hero-button {
